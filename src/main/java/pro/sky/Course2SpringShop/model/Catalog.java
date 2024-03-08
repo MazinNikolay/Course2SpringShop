@@ -5,10 +5,8 @@ import java.util.Map;
 
 public class Catalog {
     private final Map<Integer, Product> catalog;
-    public Basket basket;
 
-    public Catalog(Basket basket) {
-        this.basket = basket;
+    public Catalog() {
         catalog = Map.of(001, new Product("Молоко"),
                 002, new Product("Хлеб"),
                 003, new Product("Тапки"),
