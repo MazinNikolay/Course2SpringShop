@@ -1,7 +1,9 @@
 package pro.sky.Course2SpringShop.model;
 
-import java.util.Objects;
+import org.springframework.stereotype.Component;
 
+import java.util.Objects;
+@Component
 public class Product {
     private String productName = "";
 

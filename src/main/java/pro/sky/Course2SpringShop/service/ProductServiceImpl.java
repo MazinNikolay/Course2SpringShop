@@ -11,8 +11,8 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     private final Basket basket;
 
-    public ProductServiceImpl() {
-        this.basket = new Basket();
+    public ProductServiceImpl(Basket basket) {
+        this.basket = basket;
     }
 
     @Override

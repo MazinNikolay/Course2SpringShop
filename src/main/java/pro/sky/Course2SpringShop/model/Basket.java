@@ -1,18 +1,20 @@
 package pro.sky.Course2SpringShop.model;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 import pro.sky.Course2SpringShop.Exception.ProductNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 @SessionScope
 public class Basket {
     private final List<Product> products;
-    private final Catalog catalog = new Catalog();
+    private final Catalog catalog;
 
-    public Basket() {
+    public Basket(Catalog catalog) {
         this.products = new ArrayList<>();
+        this.catalog = catalog;
     }
 
     public void addProduct(int id) {

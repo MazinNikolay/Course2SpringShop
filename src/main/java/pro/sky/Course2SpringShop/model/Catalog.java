@@ -1,8 +1,11 @@
 package pro.sky.Course2SpringShop.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Collections;
 import java.util.Map;
 
+@Component
 public class Catalog {
     private final Map<Integer, Product> catalog;
 
