@@ -10,6 +10,7 @@ import pro.sky.Course2SpringShop.Exception.ProductNotFoundException;
 import pro.sky.Course2SpringShop.model.Product;
 import pro.sky.Course2SpringShop.service.ProductService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -31,7 +32,7 @@ public class ProductController {
     }
 
     @GetMapping(path = "/add")
-    public void addProduct(@RequestParam("id") int id) {
-        productService.addProduct(id);
+    public void addProduct(@RequestParam("idList") ArrayList<Integer> idList) {
+        productService.addProduct(idList);
     }
 }

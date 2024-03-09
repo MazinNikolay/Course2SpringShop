@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import pro.sky.Course2SpringShop.model.Basket;
 import pro.sky.Course2SpringShop.model.Product;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -16,8 +17,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void addProduct(int id) {
-        basket.addProduct(id);
+    public void addProduct(ArrayList<Integer> idList) {
+        basket.addProduct(idList);
     }
 
     @Override

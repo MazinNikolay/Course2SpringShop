@@ -6,6 +6,7 @@ import pro.sky.Course2SpringShop.Exception.ProductNotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 @SessionScope
 public class Basket {
@@ -17,12 +18,15 @@ public class Basket {
         this.catalog = catalog;
     }
 
-    public void addProduct(int id) {
+    public void addProduct(ArrayList<Integer> idList) {
+        idList.forEach(e -> products.add(findProduct(e)));
+    }
+
+    private Product findProduct(int id) {
         if (!catalog.getCatalog().containsKey(id)) {
             throw new ProductNotFoundException("Товар не существует");
         } else {
-            products.add(catalog.getCatalog().get(id));
-            System.out.println(catalog.getCatalog().get(id));
+            return catalog.getCatalog().get(id);
         }
     }
 

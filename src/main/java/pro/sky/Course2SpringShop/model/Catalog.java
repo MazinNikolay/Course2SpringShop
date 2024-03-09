@@ -7,15 +7,15 @@ import java.util.Map;
 
 @Component
 public class Catalog {
-    private final Map<Integer, Product> catalog;
+    private Map<Integer, Product> catalog;
 
     public Catalog() {
-        catalog = Map.of(001, new Product("Молоко"),
-                002, new Product("Хлеб"),
-                003, new Product("Тапки"),
-                004, new Product("Марс"),
-                005, new Product("Подписка Яндекс музыка"),
-                006, new Product("Плейстейшн"));
+        catalog = Map.of(1, new Product("Молоко"),
+                2, new Product("Хлеб"),
+                3, new Product("Тапки"),
+                4, new Product("Марс"),
+                5, new Product("Подписка Яндекс музыка"),
+                6, new Product("Плейстейшн"));
     }
 
     public Map<Integer, Product> getCatalog() {
